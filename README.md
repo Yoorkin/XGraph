@@ -31,7 +31,7 @@ Graphics.DrawImage(Img,Pos(100,200))
    如果要对图片进行缩放，可以这样写：
 ```
 '在(100,200)处绘制缩放到高为150,宽为300的Img
-Graphics.DrawBitmapStrech(Img,Bounds(100,200,150,300)
+Graphics.DrawBitmapStrech(Img,Bounds(100,200,150,300))
 ```
 ### 文档和更多示例
   将会陆续更新
