@@ -1,10 +1,10 @@
 
-[1]: https://github.com/Yoorkin/XGraph/tree/master/doc/XTool.md
-[2]: https://github.com/Yoorkin/XGraph/tree/master/doc/XBounds.md
-[3]: https://github.com/Yoorkin/XGraph/tree/master/doc/XPoint.md
-[4]: https://github.com/Yoorkin/XGraph/tree/master/doc/XPen.md
-[5]: https://github.com/Yoorkin/XGraph/tree/master/doc/XPath.md
-[6]: https://github.com/Yoorkin/XGraph/tree/master/doc/XBitmap.md
+[1]: XTool.md
+[2]: XBounds.md
+[3]: XPoint.md
+[4]: XPen.md
+[5]: XPath.md
+[6]: XBitmap.md
 
 
 ## XGraphics
@@ -39,7 +39,7 @@ Function GraphicsFormHwnd(Hwnd as long)
 |名称|描述|
 |:---:|:---:|
 |[Clear](#Clear)|清空画布|
-|[DrawEllipose](#DrawEllipse)|绘制椭圆|
+|[DrawEllipse](#DrawEllipse)|绘制椭圆|
 | [DrawPolygon](#DrawPolygon)|绘制多边形|
 |[DrawLine](#DrawLine)|绘制线段|
 |[DrawBezier](#DrawBezier)|绘制贝塞尔曲线|
@@ -52,7 +52,7 @@ Function GraphicsFormHwnd(Hwnd as long)
 |[DrawBitmapClip](#DrawBitmapClip)|剪裁拉伸并绘制位图|
 |[DrawRoundRectangle](#DrawRoundRectangle)|绘制圆角矩形|
 |[DrawText](#DrawText)|绘制文本|
-### **<div id="Clear">Clear<div/>**
+### **Clear**
 清空画布
 ```
 Sub Clear(Optional Color As XColor)
@@ -61,7 +61,7 @@ Sub Clear(Optional Color As XColor)
 |:---:|:---:|:---:|
 Color|[XColor](#https://github.com/Yoorkin/XGraph/tree/master/doc/XColor.md)|可选,清除画布时使用的颜色.若为空则使用白色.
 
-### **<div id="DrawEllipose">DrawDllipose<div/>**
+### **DrawEllipse**
 绘制椭圆
 ```
 Sub DrawEllipse(Tool As XTool, Bounds As XBounds)
@@ -72,7 +72,7 @@ Sub DrawEllipse(Tool As XTool, Bounds As XBounds)
 Tool|[XTool][1]|要使用的绘图工具
 Bounds|[XBounds][2]|绘制的椭圆的坐标及大小|
 
-### **<div id="DrawPolygon">DrawPolygon<div/>**
+### **DrawPolygon**
 绘制多边形
 ```
 Sub DrawPolygon(Tool As XTool, Fillmode As Fillmode, ParamArray Points() As Variant)
@@ -84,7 +84,7 @@ Points()|Variant|按顺序排列的多边形的所有点,组成`Points()`的对�
 ***tips:*** *可使用[Array函数](#http://www.w3school.com.cn/vbscript/func_array.asp)初始化`Points()`*
 
 
-### **<div id="DrawLine">DrawLine<div/>**
+### **DrawLine**
 绘制线段
 ```
 Sub DrawLine(Pen As XPen, Point1 As XPoint, Point2 As XPoint)
@@ -95,7 +95,7 @@ Tool|[XTool][1]|要使用的绘图工具
 Point1|[XPoint][3]|起点
 Point2|[XPoint][3]|终点
 
-### **<div id="DrawBezier">DrawBezier<div/>**
+### **DrawBezier**
 绘制[贝塞尔曲线](#https://baike.baidu.com/item/%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF)
 ```
 DrawBezier(Pen As XPen, Point1 As XPoint, Point2 As XPoint, Point3 As XPoint, Point4 As XPoint)
@@ -108,7 +108,7 @@ Point2|[XPoint][3]|
 Point3|[XPoint][3]|
 Point4|[XPoint][3]|
 
-### **<div id="DrawArc">DrawArc<div/>**
+### **DrawArc**
 绘制圆弧
 ```
 Sub DrawArc(Pen As XPen, Bounds As XBounds, ByVal StartAngle As Single, ByVal SweepAngle As Single)
@@ -121,7 +121,7 @@ StartAngle|Single|起始角度
 SweepAngle|Single|跨过的角度
 
 *角度的零点位于坐标系中x的正半轴,从逆时针角度大小递增.*
-### **<div id="DrawPie">DrawPie<div/>**
+### **DrawPie**
 绘制饼图
 ```
 DrawPie(Tool As XTool, Bounds As XBounds, StartAngle As Single, SweepAngle As Single)
@@ -135,7 +135,7 @@ SweepAngle|Single|跨过的角度
 
 *角度的零点位于坐标系中x的正半轴,从逆时针角度大小递增.*
 
-### **<div id="DrawPath">DrawPath<div/>**
+### **DrawPath**
 绘制路径
 ```
 Sub DrawPath(Tool As XTool, Path As XPath)
@@ -145,7 +145,7 @@ Sub DrawPath(Tool As XTool, Path As XPath)
 Tool|[XTool][1]|要使用的绘制工具
 Path|[Path][5]|要使用的路径
 
-### **<div id="DrawRectangle">DrawRectangle<div/>**
+### **DrawRectangle**
 绘制矩形
 ```
 Sub DrawRectangle(Tool As XTool, Bounds As XBounds)
@@ -154,7 +154,7 @@ Sub DrawRectangle(Tool As XTool, Bounds As XBounds)
 ---:|:---:|:---
 Tool|[XTool][1]|要使用的绘制工具
 Bounds|[XBounds][2]|绘制的矩形的坐标及大小|
-### **<div id="DrawBitmap">DrawBitmap<div/>**
+### **DrawBitmap**
 绘制位图
 ```
 Sub DrawBitmap(Bitmap As XBitmap, Point As XPoint)
@@ -164,7 +164,7 @@ Sub DrawBitmap(Bitmap As XBitmap, Point As XPoint)
 Bitmap|[XBitmap][6]|位图
 Point|[XPoint][3]|绘制坐标
 
-### **<div id="DrawBitmapStretch">DrawBitmapStretch<div/>**
+### **DrawBitmapStretch**
 拉伸并绘制位图
 ```
 Sub DrawBitmapStretch(Bitmap As XBitmap, Bounds As XBounds) 
@@ -173,7 +173,7 @@ Sub DrawBitmapStretch(Bitmap As XBitmap, Bounds As XBounds)
 ---:|:---:|:---
 Bitmap|[XBitmap][6]|位图
 Bounds|[XBounds][2]|绘制坐标及宽高
-### **<div id="DrawBitmapClip">DrawBitmapClip<div/>**
+### **DrawBitmapClip**
 拉伸剪裁并绘制位图
 ```
 Sub DrawBitmapClip(Bitmap As XBitmap, Target As XBounds, source As XBounds)
@@ -184,7 +184,7 @@ Bitmap|[XBitmap][6]|位图
 Target|[XBounds][2]|目标区域的坐标及宽高
 Source|[XBounds][2]|源区域的坐标及宽高
 
-### **<div id="DrawRoundRectangle">DrawRoundRectangle<div/>**
+### **DrawRoundRectangle**
 绘制圆角矩形
 ```
 Sub DrawRoundRectangle(Tool As XTool, Bounds As XBounds, Corner As XThickness)
@@ -195,7 +195,7 @@ Tool|[XTool][1]|要使用的绘制工具
 Bounds|[XBounds][2]|绘制的矩形的坐标及大小|
 Corner|[XTickness](#https://github.com/Yoorkin/XGraph/tree/master/doc/XTickness.md)|四个角的圆弧的半径
 
-### **<div id="DrawText">DrawText<div/>**
+### **DrawText**
 绘制文本
 ```
 Sub DrawText(Brush As XBrush, Context As String, Font As XFont, Bounds As XBounds)
@@ -208,7 +208,7 @@ Font|[XFont](#https://github.com/Yoorkin/XGraph/tree/master/doc/XFont.md)|字形
 Bounds|[XBounds][2]|绘制的文字的限制区域|
 
 ## 实现的接口
-[IDispose](#https://github.com/Yoorkin/XGraph/tree/master/doc/IDispose.md)
+[IDispose](IDispose.md)
 
 
 

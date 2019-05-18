@@ -6,8 +6,8 @@
 |:---:|:---:|:---:|
 |Width|Long|图片的宽度,单位为像素|
 |Height|Long|图片的高度,单位为像素|
-|Bounds|[XBounds]()|图片的高和宽集合|
-|Graphics|[XGraphics]()|图片的画布|
+|Bounds|[XBounds](XBounds.md)|图片的高和宽集合|
+|Graphics|[XGraphics](XGraphics.md)|图片的画布|
 |Handle|Long|该Gdip对象的句柄|
 
 ## 方法
@@ -16,6 +16,6 @@
 Sub Clean()
 ```
 ## 实现的接口
-XImage    
+ XImage    
 
  [XDispose]()

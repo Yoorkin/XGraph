@@ -75,23 +75,23 @@ Private Sub Class_Terminate()
     IDispose_Dispose
 End Sub
 
-Public Property Get Style() As Long
+Friend Property Get Style() As Long
     Style = mStyle
 End Property
 
-Public Property Get Font() As Long
+Friend Property Get Font() As Long
     Font = mFont
 End Property
 
-Public Property Get Strformat() As Long
+Friend Property Get Strformat() As Long
     Strformat = mStrformat
 End Property
 
-Public Property Get FontFam() As Long
+Friend Property Get FontFam() As Long
     FontFam = mFontfam
 End Property
 
-'---×ÖÌåÃû
+'---ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 Public Property Let Name(ByVal vData As String)
     mFontName = vData
     GdipDeleteFontFamily mFontfam
@@ -106,17 +106,17 @@ Public Property Get Name() As String
     Name = mFontName
 End Property
 
-'---×ÖÌå´óÐ¡
-Public Property Let Size(vData As Long)
+'---ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡
+Public Property Let Size(vData As Single)
     mFontSize = vData
     GdipDeleteFont mFont
     GdipCreateFont mFontfam, mFontSize, mStyle, UnitPixel, mFont
 End Property
-Public Property Get Size() As Long
+Public Property Get Size() As Single
     Size = mFontSize
 End Property
-'---×ÖÐÎ
-Public Property Let Bold(vData As Boolean) '´ÖÌå
+'---ï¿½ï¿½ï¿½ï¿½
+Public Property Let Bold(vData As Boolean) 'ï¿½ï¿½ï¿½ï¿½
     If mBold <> vData Then
        If vData = True Then
           mStyle = mStyle + FontStyleBold
@@ -132,7 +132,7 @@ Public Property Get Bold() As Boolean
     Bold = mBold
 End Property
 
-Public Property Let Underline(vData As Boolean) 'ÏÂ»®Ïß
+Public Property Let Underline(vData As Boolean) 'ï¿½Â»ï¿½ï¿½ï¿½
     If mUnderline <> vData Then
        If vData = True Then
           mStyle = mStyle + FontStyleUnderline
@@ -148,7 +148,7 @@ Public Property Get Underline() As Boolean
     Underline = mUnderline
 End Property
 
-Public Property Let Strikeout(vData As Boolean)  'É¾³ýÏß
+Public Property Let Strikeout(vData As Boolean)  'É¾ï¿½ï¿½ï¿½ï¿½
     If mStrikeout <> vData Then
        If vData = True Then
           mStyle = mStyle + FontStyleStrikeout
@@ -164,7 +164,7 @@ Public Property Get Strikeout() As Boolean
     Strikeout = mStrikeout
 End Property
 
-Public Property Let Italic(vData As Boolean) 'Ð±Ìå
+Public Property Let Italic(vData As Boolean) 'Ð±ï¿½ï¿½
     If mItalic <> vData Then
        If vData = True Then
           mStyle = mStyle + FontStyleItalic
@@ -179,7 +179,7 @@ End Property
 Public Property Get Italic() As Boolean
     Italic = mItalic
 End Property
-'---¶ÔÆë·½Ê½
+'---ï¿½ï¿½ï¿½ë·½Ê½
 Public Property Let Alignment(vData As StringAlignment)
     mAlignment = vData
     GdipSetStringFormatAlign mStrformat, mAlignment

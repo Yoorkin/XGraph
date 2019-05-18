@@ -84,6 +84,15 @@ End Function
 '    Set Color = New XColor
 '    Color.Create Red, Green, Blue, Alpha
 'End Function
+Public Function ColorFromCode(Code as long)as XColor
+    set ColorFromCode=new XColor
+    ColorFromCode.CreateFromCode(code)
+End function
+
+Public Function ColorFromCodeWithAlpha(Code as Long,Alpha As Long)as XColor
+    set ColorFromCodeWithAlpha=new XColor
+    ColorFromCodeWithAlpha.CreateWithAlpha(code,alpha)
+End function
 
 Public Function RGBA(Red As Byte, Green As Byte, Blue As Byte, Optional Alpha As Byte = 255) As XColor
     Set RGBA = New XColor
@@ -115,7 +124,7 @@ Public Function Path(Fillmd As Fillmode) As XPath
     Path.Create Fillmd
 End Function
 
-'╪стьм╪ф╛
+'О©╫О©╫О©╫О©╫м╪ф╛
 Public Function Bitmap(ByVal Width As Long, ByVal Height As Long) As XBitmap
     Set Bitmap = New XBitmap
     Bitmap.Create Width, Height
